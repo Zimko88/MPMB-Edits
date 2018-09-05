@@ -15,51 +15,6 @@ var iFileName = "Witch (Maranatha) - ClassList.js";
 RequiredSheetVersion(12.999);
 
 //first we add new spells to the spell list
-//Below is an example of a single spell. We will need a new entry for each new spell. Then add the spell's lowercase name to the list of spells below these entries
-SpellsList["abi-dalzim's horrid wilting"] = { //Object name; note the use of only lower case! The spelling here is used to identify the spell with and has to be exactly the same as "name" but in lower case. Also note the absence of the word "var" and the use of brackets []
-	
-	name : "Abi-Dalzim's Horrid Wilting", //Required; The name of the spell. This will be put in the Spell field on the Spell Sheet. Except, if a "nameShort" is present, this name will be put in the mouseover text (tooltip) of the Spell field on the Spell Sheet.
-	
-	nameShort : "Abi-D's Horrid Wilting", //Optional; A shortened name of the spell that fits on the Spell Sheet. If present, this name will be put on the Spell Sheet and the full name above will be put in the mouseover text (tooltip) of the Spell field on the Spell Sheet.
-	
-	nameAlt : "Horrid Wilting", //Optional; An alternative name that can be used to identify the spell with on the sheet
-	
-	regExpSearch : /^(?=.*horrid)(?=.*wilting).*$/i, //Optional; If the name is too complex or can have to many different variations, use this to define the regular expression of what to look for. If this looks to complicated, do not use it and remove this line!
-	
-	classes : ["bard", "cleric", "druid", "sorcerer", "wizard", "witch (maranatha)"], //Optional; Array of all the classes that have this spell on their list. Even with one entry you still need to put the brackets around it []. Note the use of only lower case as these entries are identical to the CLassList object names! If you omit this attribute, the spell will only be selectable through the dependencies, see below. If you want the spell to be available for subclasses and through the SpellcastingBonus object, just add an empty array, i.e. classes : [],
-	
-	source : ["HB", 0], //Required; the source and the page number. "HB" stands for homebrew. //Note that filling out this incorrectly will prohibit the spell from showing up in the spell selection dialogues. //If you want to add a custom source, see "Homebrew Syntax - SourceList.js" // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
-	
-	ritual : false, //Optional; Whether (true) or not (false) this spell is a ritual
-	
-	level : 0, //Required; The Spell Level. Has to be a number from 0 to 9 // use 1 if you are adding a psionic discipline, and 0 for a psionic talent
-	
-	school : "Trans", //Optional; Spell School as it will show up on the Spell Sheet; Can only select from: "Abjur", "Conj", "Div", "Ench", "Evoc", "Illus", "Necro", "Trans", and for psionic discipline orders: "Avatar", "Awake", "Immor", "Nomad", "Wu Jen"
-	
-	time : "1 min", //Required; Casting Time as it will show up on the Spell Sheet
-	
-	range : "Touch", //Required; Spell Range as it will show up on the Spell Sheet
-	
-	components : "V,S,M", //Optional; Components as they will show up on the Spell Sheet; Use "M\u0192" for a material component that is costly (Mƒ), and use "M\u2020" for a material component that is costly and also consumed (M†)
-	
-	compMaterial : "Two lodestones", //Optional; Material Component. This string will be put in the mouseover text (tooltip) of the component field
-	
-	duration : "Instantaneous", //Required; Spell Duration as it will show up on the Spell Sheet
-
-	save : "Int", //Optional; The ability score that the spell's Saving Throw uses. This will be put in the save field
-	
-	description : "Repair a single broken object no larger than 1 cu ft; can't restore magic to broken magic item", //Required; Short Spell Description as it will show up on the Spell Sheet
-	
-	descriptionMetric : "Repair a single broken object no larger than 1 cu ft; can't restore magic to broken magic item", //Optional; Short Spell Description as it will show up on the Spell Sheet when it is set to use the metric system. If this is omitted the sheet will automatically try to convert the 'description' to metric
-	
-	descriptionFull : "This spell repairs a single break or tear in an object you touch, such as broken chain link, two halves of a broken key, a torn clack, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage." + "\n   " + "This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.", //Optional; The full Spell Description. This string will be put in the mouseover text (tooltip) of the description field
-	
-	firstCol : "6", //Optional; Set something to be put in the first column on the spell sheet. This can be something like power point cost or ki cost, but also the commands "atwill", "oncelr", "oncesr", "markedbox", "checkbox", or "checkedbox" for the appropriate icon
-	
-	dependencies : [], //Optional; An array of spells (SpellsList object names) that will be put in the rows below this spell when this spell is added to the spell sheet
-	
-	psionic : true, //Optional; If you set this to true, the sheet will treat this spell as a psionic talent/discipline
-};
 SpellsList["glorybolt"] = {
 	name : "Glorybolt",
 	classes : ["cleric"],
@@ -81,7 +36,7 @@ SpellsList["call the quarters"] = {
 	level : 1,
 	school : "Conj",
 	time : "10 min",
-	range : "Self",
+	range : "Self (15 ft)",
 	components : "V,S",
 	duration : "1 hour",
 	description : "15 ft. rad. shows N, S, E, W, elev.; friendly crea. gain Sanctuary inside",
@@ -158,6 +113,45 @@ SpellsList["balefire"] = {
 	save : "Con",
 	description : "1 crea. takes 3d6 + 1d6/SL and 1d6(+1/SL) at start of turn, repeat save at end. Save halves dmg, ends effect.",
 	descriptionFull : "You channel the energy of brimstone into a creature you can see within range. That creature must make a Constitution saving throw. On a failed save, it takes 3d6 fire damage, and takes an additional 1d6 fire damage at the start of each of its turns. It can repeat the save at the end of its turn to end this effect. On a successful save, the target takes half damage this turn only. When you cast this spell using a slot of 3rd level or higher, the target takes an additional 1d6 fire damage on the first turn, and an additional +1 damage on subsequent turns for each slot above 2nd level."
+};
+SpellsList["chant"] = {
+	name : "Chant",
+	classes : ["bard", "cleric", "druid", "paladin", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 2,
+	school : "Ench",
+	time : "1 a",
+	range : "30 ft",
+	components : "V",
+	duration : "1 min",
+	description : "Heals friendly creatures amount equal to your spellcasting mod; bonus action to continue.",
+	descriptionFull : "You begin chanting words of restorative power. Each creature of your choice within range that can hear you heals for an amount equal to your spellcasting modifier. On subsequent turns you can use a bonus action to continue the chant. The spell ends if you use your bonus action for anything else. The spell ends for an affected creature if it leaves the range of the spell or it cannot hear you. When you cast this spell using a slot of 3rd level or higher, the range of the spell increases by 10 ft. for each slot above 2nd level."
+};
+SpellsList["influence weather"] = {
+	name : "Influence Weather",
+	classes : ["druid", "ranger", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 2,
+	school : "Trans",
+	time : "1 a",
+	range : "Self (1 mile)",
+	components : "V",
+	duration : "Instantaneous",
+	description : "Local weather shifts one category for 1 hr. Sun/Lt. Cld./Hvy Cld/Lt RainSno/Hvy RainSno/Storm.",
+	descriptionFull : "You use your connection to nature to shift the local weather slightly in one direction (see chart). The new weather takes effect over the course of the next minute after the spell is cast, and lasts at least 1 hour before natural weather patterns resume in the affected area. You cannot affect the weather in the same area more than once in an 8 hour period. When you cast this spell using a slot of 3rd level or higher, the new weather effect lasts 1 hour longer for each slot above 2nd."
+};
+SpellsList["karma"] = {
+	name : "Karma",
+	classes : ["bard", "warlock", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 2,
+	school : "Ench",
+	time : "1 ba",
+	range : "Touch",
+	components : "V,s",
+	duration : "1 min",
+	description : "Willing crea. reduces and reflects 1d6 damage of same type to attacker. 5th level for 2 creas.",
+	descriptionFull : "Touch a willing creature. For the duration, whenever that creature takes damage, it reduces that damage by 1d6 + your spellcasting modifier and reflects that amount back to its attacker, using the same damage type. This effect does not reflect any other conditions applied by the attack. When you cast this spell using a slot of 5th level or higher, you can target an additional creature."
 };
 //second make the sheet know which spells are witch spells
 //TODO change this list to the correct list of spells
