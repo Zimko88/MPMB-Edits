@@ -94,7 +94,7 @@ SpellsList["abi-dalzim's horrid wilting"] = { //Object name; note the use of onl
 	// 9th level
 	"astral projection", "foresight", "shapechange", "true polymorph", "true resurrection"
 ].forEach( function (s) {
-	if(SpellsList[s] && SpellsList[s].classes && SpellsList[s].classes.indexOf("witch (zarieth)") === -1) SpellsList[s].classes.push("witch (zarieth)");
+	if(SpellsList[s] && SpellsList[s].classes && SpellsList[s].classes.indexOf("witch (maranatha)") === -1) SpellsList[s].classes.push("witch (maranatha)");
 });
 
 ClassList["witch (maranatha)"] = { 
