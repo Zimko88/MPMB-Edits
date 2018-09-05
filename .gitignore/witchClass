@@ -265,5 +265,5 @@ usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			},
 		},
 	}
-}
+};
 
