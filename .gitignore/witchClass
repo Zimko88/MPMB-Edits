@@ -17,7 +17,7 @@ RequiredSheetVersion(12.999);
 SpellsList["glorybolt"] = {
 	name : "Glorybolt",
 	classes : ["cleric"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -30,7 +30,7 @@ SpellsList["glorybolt"] = {
 SpellsList["call the quarters"] = {
 	name : "Call the Quarters",
 	classes : ["cleric", "druid", "ranger", "warlock", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	ritual : true
 	level : 1,
 	school : "Conj",
@@ -44,7 +44,7 @@ SpellsList["call the quarters"] = {
 SpellsList["ruinous bolt"] = {
 	name : "Ruinous Bolt",
 	classes : ["druid", "sorcerer", "warlock", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 1,
 	school : "Necro",
 	time : "1 a",
@@ -58,7 +58,7 @@ SpellsList["ruinous bolt"] = {
 SpellsList["omen"] = {
 	name : "Omen",
 	classes : ["bard", "cleric", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	ritual : true
 	level : 1,
 	school : "Trans",
@@ -73,7 +73,7 @@ SpellsList["omen"] = {
 SpellsList["read aura"] = {
 	name : "Read Aura",
 	classes : ["witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	ritual : true
 	level : 1,
 	school : "Ench",
@@ -87,7 +87,7 @@ SpellsList["read aura"] = {
 SpellsList["curse chakra"] = {
 	name : "Curse Chakra",
 	classes : ["paladin", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -101,7 +101,7 @@ SpellsList["curse chakra"] = {
 SpellsList["balefire"] = {
 	name : "Balefire",
 	classes : ["sorcerer", "warlock", "witch (maranatha)", "wizard"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -116,7 +116,7 @@ SpellsList["balefire"] = {
 SpellsList["chant"] = {
 	name : "Chant",
 	classes : ["bard", "cleric", "druid", "paladin", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -129,7 +129,7 @@ SpellsList["chant"] = {
 SpellsList["influence weather"] = {
 	name : "Influence Weather",
 	classes : ["druid", "ranger", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -142,7 +142,7 @@ SpellsList["influence weather"] = {
 SpellsList["karma"] = {
 	name : "Karma",
 	classes : ["bard", "warlock", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 2,
 	school : "Ench",
 	time : "1 ba",
@@ -155,7 +155,7 @@ SpellsList["karma"] = {
 SpellsList["conjure cannon"] = {
 	name : "Conjure Cannon",
 	classes : ["wizard"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	ritual : true
 	level : 3,
 	school : "Conj",
@@ -170,7 +170,7 @@ SpellsList["conjure cannon"] = {
 SpellsList["acid rain"] = {
 	name : "Acid Rain",
 	classes : ["druid", "sorcerer", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -185,7 +185,7 @@ SpellsList["acid rain"] = {
 SpellsList["animate plants"] = {
 	name : "Animate Plants",
 	classes : ["druid", "ranger", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 3,
 	school : "Trans",
 	time : "1 min",
@@ -199,7 +199,7 @@ SpellsList["animate plants"] = {
 SpellsList["dream walk"] = {
 	name : "Dream Walk",
 	classes : ["druid", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 3,
 	school : "Trans",
 	time : "1 min",
@@ -212,7 +212,7 @@ SpellsList["dream walk"] = {
 SpellsList["orb of decay"] = {
 	name : "Orb of Decay",
 	classes : ["sorcerer", "warlock", "witch (maranatha)", "wizard"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 4,
 	school : "Necro",
 	time : "1 a",
@@ -226,7 +226,7 @@ SpellsList["orb of decay"] = {
 SpellsList["rune of binding"] = {
 	name : "Rune of Binding",
 	classes : ["bard", "sorcerer", "witch (maranatha)", "wizard"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -241,7 +241,7 @@ SpellsList["rune of binding"] = {
 SpellsList["create elixir"] = {
 	name : "Create Elixir",
 	classes : ["bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "warlock", "witch (maranatha)", "wizard"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	ritual : true
 	level : 5,
 	school : "Conj",
@@ -256,7 +256,7 @@ SpellsList["create elixir"] = {
 SpellsList["litany of the dead"] = {
 	name : "Litany of the Dead",
 	classes : ["bard", "paladin", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	ritual : true
 	level : 7,
 	school : "Necro",
@@ -271,7 +271,7 @@ SpellsList["litany of the dead"] = {
 SpellsList["sacrifice"] = {
 	name : "Sacrifice",
 	classes : ["druid", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 7,
 	school : "Necro",
 	time : "1 a",
@@ -285,7 +285,7 @@ SpellsList["sacrifice"] = {
 SpellsList["virulent storm"] = {
 	name : "Virulent Storm",
 	classes : ["warlock", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 7,
 	school : "Necro",
 	time : "1 a",
@@ -300,7 +300,7 @@ SpellsList["virulent storm"] = {
 SpellsList["black moon"] = {
 	name : "Black Moon",
 	classes : ["witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 8,
 	school : "Necro",
 	time : "1 a",
@@ -314,7 +314,7 @@ SpellsList["black moon"] = {
 SpellsList["discarnate"] = {
 	name : "Discarnate",
 	classes : ["witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 8,
 	school : "Necro",
 	time : "1 a",
@@ -329,7 +329,7 @@ SpellsList["discarnate"] = {
 SpellsList["minor ward"] = {
 	name : "Minor Ward",
 	classes : ["cleric", "druid", "witch (maranatha)"],
-	source : ["MCG", X],
+	source : ["MCG", 0],
 	level : 0,
 	school : "Ench",
 	time : "1 a",
@@ -379,7 +379,7 @@ ClassList["witch (maranatha)"] = {
 	
 	name : "Witch", //required; the name to use for the class,
 	
-	source : ["MCG", X], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
+	source : ["MCG", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
 	
 	primaryAbility : "\n \u2022 Witch: Intelligence;", //required; the text to display when citing the primary ability of the class
 	
@@ -447,7 +447,7 @@ ClassList["witch (maranatha)"] = {
 						
 		"magic tricks" : {
 			name : "Magic Tricks",
-			source : ["MCG", X],
+			source : ["MCG", 0],
 			minlevel : 1,
 			description : "\n   " + "I learn a cantrip of my choice from the following: Druidcraft, Prestidigitation, Thaumaturgy",
 									
@@ -474,7 +474,7 @@ ClassList["witch (maranatha)"] = {
 		
 		"evil eye" : {
 			name : "Evil Eye",
-			source : ["MCG", X],
+			source : ["MCG", 0],
 			minlevel : 2,
 			description : "\n   " + "Choose a School of Magic using the \"Choose Feature\" button above. As a bonus action I can choose a target I can see within thirty feet. The target has disadvantage on saving throws to resist effects of my spells from the chosen school.", //required; the text to put in the "Class Features" field
 			choices : ["Conjuration", "Enchantment", "Illusion", "Necromancy", "Transmutation"], //optional; choices the feature offers, if any.
@@ -488,25 +488,24 @@ usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 		
 		"subclassfeature3" : { //You need at least one entry named "subclassfeatureX". It signals the sheet to ask the user for which subclass he would like to have. The level of this feature should match the level the class needs to select a subclass. Once a subclass is selected, any feature with "subclassfeature" in the object name in the class entry will be ignored.
 			name : "Witch's Circle",
-			source : ["MCG", X],
+			source : ["MCG", 0],
 			minlevel : 3,
 			description : "\n   " + "Choose a Witch's Circle you wish to join and put it in the \"Class\" field" + "\n   " + "Choose either Crimson Circle, Cerulean Circle, or Crystal Circle",
 		},
 		
 		"magic mirror" : {
 			name : "Magic Mirror",
-			source : ["MCG", X],
+			source : ["MCG", 0],
 			minlevel : 18,
 			description : desc([
-				"I can perfectly alter my appearance. I expend 5000g to create a magic mirror in which I store my actual appearance. Any character who sees the mirror sees my true appearance reflected. My altered appearance is undetectable by truesight or other methods that would reveal it as an illusion, and it cannot be unwillingly dispelled, however other mirrors also reflect my appearance. If the mirror is broken, I immediately revert to my true appearance.",
+				"I can perfectly alter my appearance. I expend 5000g to create a magic mirror in which I store my actual appearance. Any character who sees the mirror sees my true appearance reflected. My altered appearance is undetectable by truesight or other methods that would reveal it as an illusion, and it cannot be unwillingly dispelled, however other mirrors also reflect my appearance. If the mirror is broken, I immediately revert to my true appearance."]),
 			usages : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
 			recovery : "short rest",
-			action : ["action"]
-				]),
+			action : ["action"],
 		},		
 		"all-seeing eye" : {
 			name : "All-Seeing Eye",
-			source : ["MCG", X],
+			source : ["MCG", 0],
 			minlevel : 20,
 			description : "\n   " + "Choose a second School of Magic using the \"Choose Feature\" button above. My Evil Eye affects this school as well. My Evil Eye ability now affects all targets affected by a spell I cast while using it. ", //required; the text to put in the "Class Features" field
 			choices : ["Conjuration", "Enchantment", "Illusion", "Necromancy", "Transmutation"], //optional; choices the feature offers, if any.
