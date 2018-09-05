@@ -14,6 +14,7 @@ RequiredSheetVersion(12.999);
 
 //first make the sheet know which spells are witch spells
 //TODO change this list to the correct list of spells
+//TODO Also add new spells to the spell list ABOVE this code
 [	// cantrips
 	"blade ward", "chill touch", "friends", "guidance", "light", "mage hand", "mending", "minor illusion", "poison spray", "resistance", "thaumaturgy", "true strike",
 
