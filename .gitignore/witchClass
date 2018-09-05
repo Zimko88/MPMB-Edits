@@ -339,17 +339,15 @@ SpellsList["minor ward"] = {
 	description : "Friendly creature has advantage on next save made in duration.",
 	descriptionFull : "You speak a word of power while pointing at a friendly creature. That creature is warded against harmful effects and has advantage on the next saving throw they make within the spell's duration."
 };
-//second make the sheet know which spells are witch spells
-//TODO change this list to the correct list of spells
-//TODO Also add new spells to the spell list ABOVE this code
+
 [	// cantrips
-	"blade ward", "chill touch", "friends", "guidance", "light", "mage hand", "mending", "minor illusion", "poison spray", "resistance", "thaumaturgy", "true strike",
+	"acid splash", "chill touch", "create bonfire", "friends", "infestation", "magic stone", "minor illusion", "minor ward", "poison spray", "primal savagery", "produce flame", "shillelagh", "spare the dying", "thorn whip", "toll the dead", "vicious mockery",
 
 	// 1st level
-	"animal friendship", "charm person", "cure wounds", "detect magic", "detect poison and disease", "faerie fire", "find familiar", "healing word", "hex", "longstrider", "protection from evil and good", "purify food and drink", "speak with animals", "witch bolt",
+	"animal friendship", "bane", "call the quarters", "cause fear", "charm person", "color spray", "curse chakra", "disguise self", "dissonant whispers", "entangle", "false life", "find familiar", "fog cloud", "hex", "ruinous bolt", "omen", "ray of sickness", "read aura", "silent image", "sleep", "tasha's hideous laughter", "unseen servant",
 
 	// 2nd level
-	"crown of madness", "darkness", "darkvision", "enhance ability", "enthrall", "hold person", "lesser restoration", "locate animals or plants", "locate object", "misty step", "moonbeam", "protection from poison", "ray of enfeeblement", "suggestion",
+	"alter self", "animal messenger", "balefire", "blindness/deafness", "calm emotions", "chant", "crown of madness", "darkvision", "enhance ability", "enlarge/reduce", "enthrall", "hold person", "invisibility", "influence weather", "karma", "magic mouth", "nystul's magic aura", "phantasmal force", "ray of enfeeblement", "silence", "spike growth", "suggestion", "web",
 
 	// 3rd level
 	"conjure animals", "daylight", "dispel magic", "fear", "fly", "magic circle", "major image", "protection from energy", "remove curse", "speak with dead", "spirit guardians", "tongues", "vampiric touch", "water walk",
