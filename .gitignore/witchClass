@@ -454,9 +454,7 @@ ClassList["witch (maranatha)"] = {
 			spellcastingBonus : { //optional; an object that adds something to the "Bonus Spells" section of the spell selection dialog //this object can have all the same attributes as the "spellcastingList" object, but must also have a "name" defined" //the other things that can be defined in this that are not in the "spellcastingList" object, are the "selection", "times" and "prepared" values
 			
 				name : "Magic Tricks", //required; this is used to identify the object, so must be an unique name
-				
-				class : "witch", //optional but required if not including the "spells" entry; see "spellcastingList" object
-												
+											
 				spells : ["druidcraft", "prestidigitation", "thaumaturgy"], //optional, but required if not including the "class" entry; see "spellcastingList" object
 				
 				selection : ["druidcraft", "prestidigitation", "thaumaturgy"], //optional if "spells" is defined; this is the default selection for the array specified in "spells"
@@ -477,7 +475,7 @@ ClassList["witch (maranatha)"] = {
 			source : ["MCG", 0],
 			minlevel : 2,
 			description : "\n   " + "Choose a School of Magic using the \"Choose Feature\" button above. As a bonus action I can choose a target I can see within thirty feet. The target has disadvantage on saving throws to resist effects of my spells from the chosen school.", //required; the text to put in the "Class Features" field
-			choices : ["Conjuration", "Enchantment", "Illusion", "Necromancy", "Transmutation"], //optional; choices the feature offers, if any.
+			choices : ["conjuration", "enchantment", "illusion", "necromancy", "transmutation"], //optional; choices the feature offers, if any.
 
 			usages : "Intelligence modifier per ",
 usagescalc : "event.value = Math.max(1, What('Int Mod'));",
@@ -508,7 +506,7 @@ usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			source : ["MCG", 0],
 			minlevel : 20,
 			description : "\n   " + "Choose a second School of Magic using the \"Choose Feature\" button above. My Evil Eye affects this school as well. My Evil Eye ability now affects all targets affected by a spell I cast while using it. ", //required; the text to put in the "Class Features" field
-			choices : ["Conjuration", "Enchantment", "Illusion", "Necromancy", "Transmutation"], //optional; choices the feature offers, if any.
+			choices : ["conjuration", "enchantment", "illusion", "necromancy", "transmutation"], //optional; choices the feature offers, if any.
 		},
 	}
 }
