@@ -283,7 +283,7 @@ SpellsList["sacrifice"] = {
 	description : "You die, healing a creature to full and curing all negative effects. You reincarnate at dawn.",
 	descriptionFull : "A character that has Reincarnate prepared and 7th level spell slots, is considered to also have this spell prepared. You plunge the ritual dagger into your heart, instantly killing your character and restoring another friendly character that you can see or that can see or hear you to full health, and removing any poison, disease, petrification, or curse effects on that character. At the following dawn, you automatically Reincarnate. While under the effects of this spells, other spells that would resurrect you from the dead do not affect you. Once you have sacrificed yourself in this way, there is a chance that your spirit will grow weary of dying. Should you become affected by Reincarnate again (either directly or via Sacrifice), roll percentile dice. On a result of 10 or lower, your spirit declines to enter your new body and you are permanently dead."
 };
-SpellsList["Virulent Storm"] = {
+SpellsList["virulent storm"] = {
 	name : "Virulent Storm",
 	classes : ["warlock", "witch (maranatha)"],
 	source : ["MCG", X],
@@ -293,10 +293,52 @@ SpellsList["Virulent Storm"] = {
 	range : "120 ft",
 	components : "V,S,M",
 	compMaterial : "A piece of diseased flesh",
-	duration : "1 minute",
+	duration : "1 min",
 	save : "Dex",
 	description : "Crea w/in 5 ft. of point take 6d10 + 1d10/SL, save halves. In cylinder, Con or disease 1/2 speed.",
 	descriptionFull : "A greenish cloud appears in the shape of a cylinder that is 60 feet tall with a 30-foot radius, centered on a point you can see 60 feet directly above you. The spell fails if you can't see a point in the air where the cloud could appear (for example, if you are in a room that can't accommodate the cloud). When you cast the spell, choose a point you can see within range. A bolt of acidic energy flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 6d10 acid damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down an acidic bolt in this way again, targeting the same point or a different one. Creatures of your choice that start their turn within the cylinder must succeed on a Constitution saving throw or become diseased, with their speed reduced by half until the disease is removed. An affected creature can repeat the saving throw at the end of each of their turns once they are outside the cylinder, ending the disease on a success. When you cast this spell using a spell slot of 8th level or higher, the damage increases by 1d10 for each slot level above 7th."
+};
+SpellsList["black moon"] = {
+	name : "Black Moon",
+	classes : ["witch (maranatha)"],
+	source : ["MCG", X],
+	level : 8,
+	school : "Necro",
+	time : "1 a",
+	range : "Self (150 ft)",
+	components : "V,S",
+	duration : "Conc, 1 min",
+	save : "Con",
+	description : "Mag. drkness blinds 150 ft. Enemies not blind Wis save or 4d6 psychic dmg from visions of horror.",
+	descriptionFull : "Darkness pervades the area in a 150 ft. radius around you, blinding creatures of your choice that do not succeed at a Constitution saving throw. Creatures affected by this condition can repeat the saving throw at the end of their turn. The darkness fills around corners, seeps through cracks and penetrates permeable surfaces such as curtains. While in the radius of the spell, those that can see are plagued by visions of abject horror. Creatures of your choice that start their turn in the Black Moon and can see must succeed on a Wisdom saving throw or take 4d6 psychic damage. "
+};
+SpellsList["discarnate"] = {
+	name : "Discarnate",
+	classes : ["witch (maranatha)"],
+	source : ["MCG", X],
+	level : 8,
+	school : "Necro",
+	time : "1 a",
+	range : "Touch",
+	components : "V,S,M",
+	compMaterial : "A metal rod attuned to the Abyss",
+	duration : "Instantaneous",
+	save : "Con",
+	description : "Touch living crea. w/ soul. On fail, soul is ripped from body and flung into Abyss. 10d6 psychic on save.",
+	descriptionFull : "You touch a living creature that has a soul. That creature must make a Constitution saving throw. On a failure, the soul is ripped from the body and flung into the Abyss, leaving its physical form behind. On a success, the target takes 10d6 psychic damage. This spell has no effect on undead, animals, or beings whose soul is promised elsewhere."
+};
+SpellsList["minor ward"] = {
+	name : "Minor Ward",
+	classes : ["cleric", "druid", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 0,
+	school : "Ench",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S",
+	duration : "Conc, 1 min",
+	description : "Friendly creature has advantage on next save made in duration.",
+	descriptionFull : "You speak a word of power while pointing at a friendly creature. That creature is warded against harmful effects and has advantage on the next saving throw they make within the spell's duration."
 };
 //second make the sheet know which spells are witch spells
 //TODO change this list to the correct list of spells
