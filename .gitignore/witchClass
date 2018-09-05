@@ -1,11 +1,13 @@
 /*	-WHAT IS THIS?-
-	The script featured here adds the Witch class as featured in the Maranatha Campaign Guide.
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
 
 */
 
 /*	-INFORMATION-
-	Subject:	Class
-	Effect:		This is the syntax for adding the Witch class.
+	Subject:	Campaign Guide
+	Effect:		This script adds content from the Maranatha Campaign Guide written by kestrana (CJ Oliver). It includes the witch class, 
+	college of folk bard subclass, militia fighter subclass, and new spells, items, feats, and weapons.
 	Sheet:		v13.00.00 (2018-??-??) [identical to v12.999 syntax, except v12.999 uses 'borrow' for the burrow speed]
 */
 
