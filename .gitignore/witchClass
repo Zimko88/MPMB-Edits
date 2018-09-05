@@ -11,10 +11,9 @@
 	Sheet:		v13.00.00 (2018-??-??) [identical to v12.999 syntax, except v12.999 uses 'borrow' for the burrow speed]
 */
 
-var iFileName = "Witch (Maranatha) - ClassList.js"; 
+var iFileName = "Homebrew Syntax - SpellsList.js";
 RequiredSheetVersion(12.999);
 
-//first we add new spells to the spell list
 SpellsList["glorybolt"] = {
 	name : "Glorybolt",
 	classes : ["cleric"],
@@ -375,6 +374,8 @@ SpellsList["minor ward"] = {
 ].forEach( function (s) {
 	if(SpellsList[s] && SpellsList[s].classes && SpellsList[s].classes.indexOf("witch (maranatha)") === -1) SpellsList[s].classes.push("witch (maranatha)");
 });
+
+var iFileName = "Witch (Maranatha) - ClassList.js"; 
 
 ClassList["witch (maranatha)"] = { 
 
