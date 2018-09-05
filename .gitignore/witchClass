@@ -11,7 +11,7 @@
 	Sheet:		v13.00.00 (2018-??-??) [identical to v12.999 syntax, except v12.999 uses 'borrow' for the burrow speed]
 */
 
-var iFileName = "Homebrew Syntax - SpellsList.js";
+var iFileName = "Maranatha Campaign Guide - MCG.js";
 RequiredSheetVersion(12.999);
 
 SpellsList["glorybolt"] = {
@@ -373,8 +373,6 @@ SpellsList["minor ward"] = {
 	if(SpellsList[s] && SpellsList[s].classes && SpellsList[s].classes.indexOf("witch (maranatha)") === -1) SpellsList[s].classes.push("witch (maranatha)");
 });
 
-var iFileName = "Witch (Maranatha) - ClassList.js"; 
-
 ClassList["witch (maranatha)"] = { 
 
 	regExpSearch : /^(?=.*witch).*$/i,
@@ -483,7 +481,7 @@ ClassList["witch (maranatha)"] = {
 
 			usages : "Intelligence modifier per ",
 usagescalc : "event.value = Math.max(1, What('Int Mod'));",
-			recovery : long rest",
+			recovery : "long rest",
 
 			action : ["bonus action"] //optional; adds the name of this feature to the bonus action list when chosen. The options are "action", "bonus action", and "reaction"
 		},
@@ -495,52 +493,23 @@ usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			description : "\n   " + "Choose a Witch's Circle you wish to join and put it in the \"Class\" field" + "\n   " + "Choose either Crimson Circle, Cerulean Circle, or Crystal Circle",
 		},
 		
-		"subclassfeature3.1" : {
-			name : "", //any feature who's name is empty like this one is, will be ignored. Since v12.5 of the sheet, an entry like this serves no function
-			minlevel : 3,
-		},
-		
-		"natural antivenom" : {
-			name : "Natural Antivenom",
-			source : ["UA:MC", 7],
-			minlevel : 9,
+		"magic mirror" : {
+			name : "Magic Mirror",
+			source : ["MCG", X],
+			minlevel : 18,
 			description : desc([
-				"I have advantage on saves vs. poison and resistance to poison damage",
-				"When I use a poultice, in addition to healing, I cure one poison effect on the creature",
-				"I gain proficiency with Constitution saving throws"
-			]),
-		
-			savetxt : { // Optional; this attribute defines entries to add to the field for "Saving Throw Advantages / Disadvantages"
-			
-				text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // Optional; this is an array of strings, and each of those strings is added to the field exactly as presented here
-				
-				immune : ["poison", "disease"], // Optional; this is an array of strings that the character is immune to. This is put in the field after the text "Immune to ", so in this example it would result in "Immune to poison and disease"
-				
-				adv_vs : ["traps", "charmed"] // Optional; this is an array of things that the character has advantage on saves against. This is put in the field after the text "Adv. on saves vs. ", so in this example it would result in "Adv. on saves vs. traps and charmed"
-			},
-			
-			dmgres : ["Poison"], //optional; an array of damage types that the class gets resistance against. // If the resistance has a condition attached to it, like only being against nonmagical attacks, substitute the entry in the array with an array of 2: [the damage type, the damage type with the condition]. // For example: [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]]
-			
-			saves : ["Con"], //optional; an array of the ability scores with which the class feature grants proficiency in saving throws
-	
-			toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"]], // optional; this is an array with the tool proficiencies gained. Each entry can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
-			
-			languageProfs : [1, "Elvish"], // optional; this is an array of the language proficiencies gained. An entry can either be 1) a string that represents the language learned or 2) a number which is the number of language gained that can be chosen by the player
-			
-			speed : { //required; This sets a value for one or more speed modes, and/or a value to be added to a specific speed mode or to all speed modes // the attributes of this object can be "walk", "burrow", "climb", "fly", "swim", and "allModes"
-					
-				// all of the following attributes are optional and you can add more ("burrow" isn't part of this example!)
-				
-				walk : { spd : 30, enc : 20 }, // the objects "walk", "burrow", "climb", "fly", "swim" are all the same, they are an object with two attributes, 'spd' for the speed in feet, and 'enc' for the encumbered speed in feet.
-				
-				climb : { spd : "+50", enc : 0 }, // instead of numbers, you can also have modifiers. Modifiers are a string, starting with a mathematical operator, followed by a number (e.g. "-10", "+20"). // a value that is zero is ignored
-				
-				fly : { spd : "walk", enc : 0 }, // instead of a number/modifier, you can also set the attribute to "walk". This makes the speed mode assume the walking speed // Using an underscore as the first character means the value is only added if the value would be non-zero
-				
-				swim : { spd : "fixed 60", enc : "fixed 60" }, // if you include the word "fixed" together with a number, the movement mode will be that number, without any modifiers from other sources (like the Monk's speed bonus). However, if another entry that isn't 'fixed' does end up with a higher total while including any modifiers, that speed is used instead
-				
-				allModes : "+10" // the 'allModes' attribute can only consist of a modifier. This modifier is applied to all speed modes, both normal and encumbered. It is only applied if the speed mode exists, it won't give the character a burrow speed if it would otherwise have none, for example
-			},
+				"I can perfectly alter my appearance. I expend 5000g to create a magic mirror in which I store my actual appearance. Any character who sees the mirror sees my true appearance reflected. My altered appearance is undetectable by truesight or other methods that would reveal it as an illusion, and it cannot be unwillingly dispelled, however other mirrors also reflect my appearance. If the mirror is broken, I immediately revert to my true appearance.",
+			usages : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+			recovery : "short rest",
+			action : ["action"]
+				]),
+		},		
+		"all-seeing eye" : {
+			name : "All-Seeing Eye",
+			source : ["MCG", X],
+			minlevel : 20,
+			description : "\n   " + "Choose a second School of Magic using the \"Choose Feature\" button above. My Evil Eye affects this school as well. My Evil Eye ability now affects all targets affected by a spell I cast while using it. ", //required; the text to put in the "Class Features" field
+			choices : ["Conjuration", "Enchantment", "Illusion", "Necromancy", "Transmutation"], //optional; choices the feature offers, if any.
 		},
 	}
 }
