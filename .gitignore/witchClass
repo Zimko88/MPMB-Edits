@@ -135,7 +135,7 @@ SpellsList["influence weather"] = {
 	school : "Trans",
 	time : "1 a",
 	range : "Self (1 mile)",
-	components : "V",
+	components : "V,S",
 	duration : "Instantaneous",
 	description : "Local weather shifts one category for 1 hr. Sun/Lt. Cld./Hvy Cld/Lt RainSno/Hvy RainSno/Storm.",
 	descriptionFull : "You use your connection to nature to shift the local weather slightly in one direction (see chart). The new weather takes effect over the course of the next minute after the spell is cast, and lasts at least 1 hour before natural weather patterns resume in the affected area. You cannot affect the weather in the same area more than once in an 8 hour period. When you cast this spell using a slot of 3rd level or higher, the new weather effect lasts 1 hour longer for each slot above 2nd."
@@ -148,10 +148,67 @@ SpellsList["karma"] = {
 	school : "Ench",
 	time : "1 ba",
 	range : "Touch",
-	components : "V,s",
+	components : "V,S",
 	duration : "1 min",
 	description : "Willing crea. reduces and reflects 1d6 damage of same type to attacker. 5th level for 2 creas.",
 	descriptionFull : "Touch a willing creature. For the duration, whenever that creature takes damage, it reduces that damage by 1d6 + your spellcasting modifier and reflects that amount back to its attacker, using the same damage type. This effect does not reflect any other conditions applied by the attack. When you cast this spell using a slot of 5th level or higher, you can target an additional creature."
+};
+SpellsList["conjure cannon"] = {
+	name : "Conjure Cannon",
+	classes : ["wizard"],
+	source : ["MCG", X],
+	ritual : true
+	level : 3,
+	school : "Conj",
+	time : "1 a",
+	range : "300 ft.",
+	components : "V,S,M",
+	compMaterial : "A pinch of gunpowder",
+	duration : "Conc, 10 min",
+	description : "Create cannon and 4 balls; range sp. atk. on hit 2d20 + 1d20/2SL 1st turn only. Others can use.",
+	descriptionFull : "You create a cannon and a pile of four cannon balls and firing supplies in an unoccupied space that you can see within 30 ft. of you. Make a ranged spell attack against a target you can see in range. On a hit, the target takes 2d20 bludgeoning damage. While you maintain concentration on this spell, a character can use an action to load one of the conjured cannonballs or their own ammunition and fire the cannon as per the game statistics for this weapon type. When you cast this spell using a spell slot of 5th  level or higher, the damage increases by 1d20 for each two slot levels above 3rd, and you create one additional cannonball."
+};
+SpellsList["acid rain"] = {
+	name : "Acid Rain",
+	classes : ["druid", "sorcerer", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 3,
+	school : "Conj",
+	time : "1 a",
+	range : "300 ft.",
+	components : "V,S,M",
+	compMaterial : "An ounce of acid",
+	duration : "Conc, 1 min",
+	save : "Con",
+	description : "Create 20x40 cylinder. Crea. inside take 4d8 + 1d8/SL acid, half saves. Bonus act. move 40 ft.",
+	descriptionFull : "You create a 20-foot-radius, 40-foot-high cylinder centered on a point in range. Each creature in the cylinder when it appears or that ends its turn there must make a Constitution save.  A creature takes 4d8 acid damage on a failed save, or half on a success. As a bonus action, you can move the cylinder up to 30 ft. in any direction in range. When you cast this spell using a slot of 4th level or higher, the damage increases by 1d8 for each slot above 3rd."
+};
+SpellsList["animate plants"] = {
+	name : "Animate Plants",
+	classes : ["druid", "ranger", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 3,
+	school : "Trans",
+	time : "1 min",
+	range : "10 ft.",
+	components : "V,S,M",
+	compMaterial : "Living plants",
+	duration : "24 hrs",
+	description : "Create a needle blight under your control. Bonus action to issue commands. Can have multiple.",
+	descriptionFull : "This spell creates a plant servant. Choose a Medium or Small living plant within range. The spell imbues that plant with basic intelligence and ambulatory skills. It becomes a Needle Blight under your control. On each of your turns you can use a bonus action to mentally command any creature you made with this spell if it is within 60 ft. of you. If you control multiple creatures you can issue the command to any or all of them, issuing the same command to each one. You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete. The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one. When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional Plant creatures for each slot above 3rd. Each of the creatures must come from a different plant."
+};
+SpellsList["dream walk"] = {
+	name : "Dream Walk",
+	classes : ["druid", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 3,
+	school : "Trans",
+	time : "1 min",
+	range : "Self (300 ft.)",
+	components : "V",
+	duration : "1 hr",
+	description : "During LR assume incorporeal dream form that can see and hear area around you.",
+	descriptionFull : "This spell can only be cast during a long rest. During your long rest, while you are sleeping or in a Trance, you can explore your surroundings in range in your dreams. Your incorporeal dream form moves at the same speed you do, and can't be seen, smelled, or heard except by creatures with trueseeing. The world in your dreams appears hazy and less detailed than the real world. You can't manipulate objects or interact with any creatures while in this state, but you can see and hear the areas around you. The spell ends if your dream form comes into contact with an Antimagic Field or similar magic. Another creature must use an action to awaken you from this state to exit it before the duration is complete. When you cast this spell using a slot of 4th level or higher, the radius of the spell increases by an additional 300 feet for every slot level above 3rd."
 };
 //second make the sheet know which spells are witch spells
 //TODO change this list to the correct list of spells
