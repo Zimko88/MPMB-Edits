@@ -60,7 +60,105 @@ SpellsList["abi-dalzim's horrid wilting"] = { //Object name; note the use of onl
 	
 	psionic : true, //Optional; If you set this to true, the sheet will treat this spell as a psionic talent/discipline
 };
-
+SpellsList["glorybolt"] = {
+	name : "Glorybolt",
+	classes : ["cleric"],
+	source : ["MCG", X],
+	level : 1,
+	school : "Evoc",
+	time : "1 a",
+	range : "120 ft",
+	components : "V,S",
+	duration : "1 round",
+	description : "1 target rngd atk roll, on hit 4d6 + 1d6/SL radiant + target has disad on next atk/save/ability check",
+	descriptionFull : "A brilliant cordon of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and has disadvantage on their next attack roll or saving throw, thanks to the thick ropes of milky energy that wrap around it. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+};
+SpellsList["call the quarters"] = {
+	name : "Call the Quarters",
+	classes : ["cleric", "druid", "ranger", "warlock", "witch (maranatha)"],
+	source : ["MCG", X],
+	ritual : true
+	level : 1,
+	school : "Conj",
+	time : "10 min",
+	range : "Self",
+	components : "V,S",
+	duration : "1 hour",
+	description : "15 ft. rad. shows N, S, E, W, elev.; friendly crea. gain Sanctuary inside",
+	descriptionFull : "You trace a circular outline on the ground, creating a magical space that aligns to the cardinal directions. The circle indicates which direction is north, south, east, and west, and provides your elevation or how deep you are underground. When a friendly creature first enters the circle, or begins it's turn there, it gains the benefits of the Sanctuary spell as if it were cast on them."
+};
+SpellsList["ruinous bolt"] = {
+	name : "Ruinous Bolt",
+	classes : ["druid", "sorcerer", "warlock", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 1,
+	school : "Necro",
+	time : "1 a",
+	range : "120 ft",
+	components : "V,S,M",
+	compMaterial : "Powdered Wormwood",
+	duration : "Instantaneous",
+	description : "1 target rngd atk roll, on hit 2d6 + 1d6/SL acid & 1d6 acid at end of target's turn. Auto-crit on objects.",
+	descriptionFull : "Make a ranged spell attack against the target. On a hit, the target takes 2d6 acid damage, and another 1d6 acid damage at the end of its next turn. When this spell targets a non-magical item that isn't being worn or carried, a hit is always a critical. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+};
+SpellsList["omen"] = {
+	name : "Omen",
+	classes : ["bard", "cleric", "witch (maranatha)"],
+	source : ["MCG", X],
+	ritual : true
+	level : 1,
+	school : "Trans",
+	time : "10 min",
+	range : "Touch",
+	components : "V,S,M",
+	compMaterial : "An item to be transmuted",
+	duration : "1 hour",
+	description : "Mundane item glows red = danger, gold = treasure, blue = secret door +1 hr/SL",
+	descriptionFull : "You touch a non-magical item. For the duration, the item provides clues as to the immediate future. It glows red when unfriendly creatures are within 30 feet. It glows gold when treasure worth 50g or more is within 10 feet. It glows blue when a concealed or secret entrance is within 10 feet. It glows a combination of colors when multiple conditions are true. When you cast this spell using a spell slot of 2nd level or higher, the duration increases by 1 hour for each slot level above 1st."
+};
+SpellsList["read aura"] = {
+	name : "Read Aura",
+	classes : ["witch (maranatha)"],
+	source : ["MCG", X],
+	ritual : true
+	level : 1,
+	school : "Ench",
+	time : "1 ba",
+	range : "30 ft",
+	components : "V",
+	duration : "1 min",
+	description : "Determine health, age, align., mental, emotion, traits of creature you can see.",
+	descriptionFull : "Target a creature you can see. For the duration, you can determine the creature's relative health, age, alignment, mental state, emotions, and personality traits. If the creature's emotions change during the duration (such as it becomes angry) you see their aura shift to reflect this change. The spell ends if you can no longer see the creature. When you cast this spell using a slot of 2nd level or higher, you can target an additional creature for each slot level above 1st."
+};
+SpellsList["curse chakra"] = {
+	name : "Curse Chakra",
+	classes : ["paladin", "witch (maranatha)"],
+	source : ["MCG", X],
+	level : 2,
+	school : "Ench",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S",
+	duration : "Conc, 1 min",
+	save : "Con",
+	description : "1 creature saves or gains vulnerability to one of acid/fire/necro/poison/psy.",
+	descriptionFull : "You gesture to a creature's energy points and twist their aura to allow vulnerability to the elements. The target makes a Constitution saving throw. On a failure, choose acid, fire, necrotic, poison, or psychic. The target gains vulnerability to that damage type for the duration of the spell. When you cast this spell using a spell slot of 3rd level or higher, you can target an additional creature within range for each slot level above 2nd."
+};
+SpellsList["balefire"] = {
+	name : "Balefire",
+	classes : ["sorcerer", "warlock", "witch (maranatha)", "wizard"],
+	source : ["MCG", X],
+	level : 2,
+	school : "Ench",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "A piece of brimstone",
+	duration : "1 min",
+	save : "Con",
+	description : "1 crea. takes 3d6 + 1d6/SL and 1d6(+1/SL) at start of turn, repeat save at end. Save halves dmg, ends effect.",
+	descriptionFull : "You channel the energy of brimstone into a creature you can see within range. That creature must make a Constitution saving throw. On a failed save, it takes 3d6 fire damage, and takes an additional 1d6 fire damage at the start of each of its turns. It can repeat the save at the end of its turn to end this effect. On a successful save, the target takes half damage this turn only. When you cast this spell using a slot of 3rd level or higher, the target takes an additional 1d6 fire damage on the first turn, and an additional +1 damage on subsequent turns for each slot above 2nd level."
+};
 //second make the sheet know which spells are witch spells
 //TODO change this list to the correct list of spells
 //TODO Also add new spells to the spell list ABOVE this code
@@ -265,5 +363,5 @@ usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			},
 		},
 	}
-};
+}
 
