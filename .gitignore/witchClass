@@ -1,0 +1,184 @@
+/*	-WHAT IS THIS?-
+	The script featured here adds the Witch class as featured in the Maranatha Campaign Guide.
+
+*/
+
+/*	-INFORMATION-
+	Subject:	Class
+	Effect:		This is the syntax for adding the Witch class.
+	Sheet:		v13.00.00 (2018-??-??) [identical to v12.999 syntax, except v12.999 uses 'borrow' for the burrow speed]
+*/
+
+var iFileName = "Witch (Maranatha) - ClassList.js"; 
+RequiredSheetVersion(12.999);
+
+ClassList["witch"] = { 
+
+	regExpSearch : /^(?=.*witch).*$/i,
+	
+	name : "Witch", //required; the name to use for the class,
+	
+	source : ["MCG", X], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
+	
+	primaryAbility : "\n \u2022 Witch: Intelligence;", //required; the text to display when citing the primary ability of the class
+	
+	prereqs : "\n \u2022 Witch: Intelligence 13;", //required; the text to display when citing the prerequisite for the class when multiclassing
+	
+	die : 6, //required; the type of hit die the class has (i.e. 10 means d10)
+	
+	improvements : [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5], //required; the amount of ability score improvements (or feats) at each level. Note that there are 20 entries, one for each level. This example uses the Fighter's progression
+	
+	saves : ["Int", "Dex"], //required; the two save proficiencies.
+	
+	skills : ["\n\n" + toUni("Witch") + ": Choose two from Deception, Investigation, Medicine, Nature, Perception, and Sleight of Hand.", "\n\n" + toUni("Witch") + ": Choose one from Deception, Medicine, Nature, and Sleight of Hand."], //required; the text to display for skill proficiencies. Note the \n\n at the start, they are important! The first entry is for when the class is the primary class, the second entry is for when the class is taken later as part of a multiclass
+
+/* SYNTAX CHANGE v12.998 >> old syntax for 'tools' and 'languages' are no longer supported!! */
+	toolProfs : { // optional; this is an object with arrays with the tool proficiencies gained. Each entry in an array can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
+		primary : [["Alchemist's Supplies or Herbalism Kit", 1]], // optional; the tool proficiencies gained if the class is the primary class (i.e. taken at 1st level)
+		secondary : [["Alchemist's Supplies"]] // optional; the tool proficiencies gained if the class is not the primary class (i.e. taken at a later level)
+	},
+	
+	armor : [ //required; the 4 entries are for: ["light", "medium", "heavy", "shields"]
+		[true, false, false, false], //required; the armor proficiencies if this is the first or only class
+		[true, false, false, false] //required; the armor proficiencies if this class is multiclassed with (so not taken at level 1, but later)
+	],
+	
+	weapons : [ //required; the 3 entries are for: ["simple", "martial", "other"]
+		[false, false, ["club", "dagger", "hand crossbow", "mace", "quarterstaff"]], //required; the weapon proficiencies if this is the first or only class
+		[false, false, ["hand crossbow"]] //required; the weapon proficiencies if this class is multiclassed with (so not taken at level 1, but later)
+	],
+	
+	equipment : "Witch starting equipment:\n \u2022 quarterstaff -or- a dagger;\n \u2022 A component pouch -or- a witch's wand;\n \u2022 An explorer's pack -or- a monster hunter's pack;\n \u2022 An herbalism kit -or- alchemist's supplies; \u2022 hide armor, spellbook.\n\nAlternatively, choose 5d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.", //required; the text to display when citing the starting equipment
+	
+	subclasses : ["Witch's Circle", ["crimson circle", "cerulean circle", "crystal circle"]], //required; the names of the subclasses. The first entry is the overall name that is given to the subclasses, the second entry is a list of the subclass, using the exact names of the entry of the subclasses in the ClassSubList. //Note that if one of the entries in the array of subclasses doesn't exist in the ClassSubList, the sheet will throw an error as soon as you make a character with levels in this class
+	//IMPORTANT: for any subclass you add using the AddSubClass() function, don't list them here! The AddSubClass() function makes its own entry in this array! If you have entries here that don't exist (because you didn't add any ClassSubList entry, or added it using the AddSubClass() function, then the sheet will throw strange errors)!
+	
+	attacks : [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], //required; the amount of attacks at each level. Note that there are 20 entries, one for each level.
+	
+	abilitySave : 4, //optional, but required for a spellcaster; the ability score to use for the Ability Saving Throws. Remove this line if your class has no Ability that requires Saving Throws. (Str=1, Dex=2, Con=3, Int=4, Wis=5, Cha=6)
+		
+	spellcastingFactor : 1, //required for a spellcaster; the speed with which spell progression works type 1 for full spellcasting (Cleric), 2 for half spellcasting (Paladin), and 3 for one-third spellcasting (Arcane Trickster). This can be any positive number other than 0. Remove this line if your class has no spellcasting. If your character uses the Warlock way of spellcasting, write "warlock1" here. The 1 indicates the spell progression factor. You can change it to a 2 or 3 to have half or one-third spell progression (or to any other factor you like).
+		// You can also have this refer to a Spell Slot progression you define yourself, as a separate variable (see "Homebrew Syntax - SpellTable.js"). In order to do this the name of that variable and the spellcastingFactor must match. Using the name "purplemancer" for example would mean that here you put [spellcastingFactor : "purplemancer1"] (the 1 is the factor, this can be any positive number other than 0) while for the variable containing the table you use "purplemancerSpellTable". Note that the name is all lower case!
+			
+	spellcastingKnown : { //Optional; Denotes the amount and type of spells the class has access to
+	
+		cantrips : [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6], //Optional; This can either be one number, an array of 20 numbers, or be omitted for a class that doesn't have access to cantrips. The numbers reflect the amount of cantrips known
+		
+		spells : "book",//Optional; This can either be one number, an array of 20 numbers, or be omitted for a class that doesn't have access to spells. The numbers reflect the amount of spells known. For a class that doesn't know spells, but prepares them from a list, you should put "list" here. For a class that uses a spellbook, you should put "book" here.
+		
+		prepared : true //Optional; This indicates that the class has to prepare spells like a cleric/druid/paladin/wizard
+	
+	},
+
+	spellcastingList : {
+		class : "witch"
+	},
+	
+	features : { //required;  the class features. Each works the same way, so only a couple of example are given. You can add as many as you want
+	
+		"spellcasting" : {
+			name : "Spellcasting",
+			source : ["P", 114],
+			minlevel : 1,
+			description : "\n   " + "I can cast prepared witch cantrips/spells, using Intelligence as my spellcasting ability" + "\n   " + "I can use a witch's wand as a spellcasting focus" + "\n   " + "I can cast all witch spells in my spellbook as rituals if they have the ritual tag",
+			additional : ["2 cantrips known", "2 cantrips known", "2 cantrips known", "2 cantrips known", "3 cantrips known", "3 cantrips known", "3 cantrips known", "3 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "6 cantrips known", "6 cantrips known", "6 cantrips known", "6 cantrips known"] //optional; text to display in the header of the feature. This can be one value, but can also be an array of 20 values, one for each level.
+		},
+						
+		"magic tricks" : {
+			name : "Magic Tricks",
+			source : ["MCG", X],
+			minlevel : 1,
+			description : "\n   " + "I learn a cantrip of my choice from the following: Druidcraft, Prestidigitation, Thaumaturgy",
+									
+			spellcastingBonus : { //optional; an object that adds something to the "Bonus Spells" section of the spell selection dialog //this object can have all the same attributes as the "spellcastingList" object, but must also have a "name" defined" //the other things that can be defined in this that are not in the "spellcastingList" object, are the "selection", "times" and "prepared" values
+			
+				name : "Magic Tricks", //required; this is used to identify the object, so must be an unique name
+				
+				class : "witch", //optional but required if not including the "spells" entry; see "spellcastingList" object
+												
+				spells : ["druidcraft", "prestidigitation", "thaumaturgy"], //optional, but required if not including the "class" entry; see "spellcastingList" object
+				
+				selection : ["druidcraft", "prestidigitation", "thaumaturgy"], //optional if "spells" is defined; this is the default selection for the array specified in "spells"
+				
+				times : 1, //optional; this is the number of times the bonus spells should be added. //This can also be an array of 20 values. That way the number of times are level-dependent
+				
+				atwill : true, //optional; if set to 'true', this makes the spell selected for this/these bonus spells to get "At Will" in the first column
+				
+				firstCol : "8", //optional; if set to any value, this makes the spell selected for this/these bonus spells to get the first two letters/numbers of that value in the first column
+			},
+			
+			spellFirstColTitle : "Wi", //optional, only works if spellcastingBonus exists; if set to any value, this makes the first column of the captions on the spell sheet be set to the first two letters/numbers of that value	
+		
+		},
+		
+		"evil eye" : {
+			name : "Evil Eye",
+			source : ["MCG", X],
+			minlevel : 2,
+			description : "\n   " + "Choose a School of Magic using the \"Choose Feature\" button above. As a bonus action I can choose a target I can see within thirty feet. The target has disadvantage on saving throws to resist effects of my spells from the chosen school.", //required; the text to put in the "Class Features" field
+			choices : ["Conjuration", "Enchantment", "Illusion", "Necromancy", "Transmutation"], //optional; choices the feature offers, if any.
+
+			usages : "Intelligence modifier per ",
+usagescalc : "event.value = Math.max(1, What('Int Mod'));",
+			recovery : long rest",
+
+			action : ["bonus action"] //optional; adds the name of this feature to the bonus action list when chosen. The options are "action", "bonus action", and "reaction"
+		},
+		
+		"subclassfeature3" : { //You need at least one entry named "subclassfeatureX". It signals the sheet to ask the user for which subclass he would like to have. The level of this feature should match the level the class needs to select a subclass. Once a subclass is selected, any feature with "subclassfeature" in the object name in the class entry will be ignored.
+			name : "Witch's Circle",
+			source : ["MCG", X],
+			minlevel : 3,
+			description : "\n   " + "Choose a Witch's Circle you wish to join and put it in the \"Class\" field" + "\n   " + "Choose either Crimson Circle, Cerulean Circle, or Crystal Circle",
+		},
+		
+		"subclassfeature3.1" : {
+			name : "", //any feature who's name is empty like this one is, will be ignored. Since v12.5 of the sheet, an entry like this serves no function
+			minlevel : 3,
+		},
+		
+		"natural antivenom" : {
+			name : "Natural Antivenom",
+			source : ["UA:MC", 7],
+			minlevel : 9,
+			description : desc([
+				"I have advantage on saves vs. poison and resistance to poison damage",
+				"When I use a poultice, in addition to healing, I cure one poison effect on the creature",
+				"I gain proficiency with Constitution saving throws"
+			]),
+		
+			savetxt : { // Optional; this attribute defines entries to add to the field for "Saving Throw Advantages / Disadvantages"
+			
+				text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // Optional; this is an array of strings, and each of those strings is added to the field exactly as presented here
+				
+				immune : ["poison", "disease"], // Optional; this is an array of strings that the character is immune to. This is put in the field after the text "Immune to ", so in this example it would result in "Immune to poison and disease"
+				
+				adv_vs : ["traps", "charmed"] // Optional; this is an array of things that the character has advantage on saves against. This is put in the field after the text "Adv. on saves vs. ", so in this example it would result in "Adv. on saves vs. traps and charmed"
+			},
+			
+			dmgres : ["Poison"], //optional; an array of damage types that the class gets resistance against. // If the resistance has a condition attached to it, like only being against nonmagical attacks, substitute the entry in the array with an array of 2: [the damage type, the damage type with the condition]. // For example: [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]]
+			
+			saves : ["Con"], //optional; an array of the ability scores with which the class feature grants proficiency in saving throws
+	
+			toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"]], // optional; this is an array with the tool proficiencies gained. Each entry can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
+			
+			languageProfs : [1, "Elvish"], // optional; this is an array of the language proficiencies gained. An entry can either be 1) a string that represents the language learned or 2) a number which is the number of language gained that can be chosen by the player
+			
+			speed : { //required; This sets a value for one or more speed modes, and/or a value to be added to a specific speed mode or to all speed modes // the attributes of this object can be "walk", "burrow", "climb", "fly", "swim", and "allModes"
+					
+				// all of the following attributes are optional and you can add more ("burrow" isn't part of this example!)
+				
+				walk : { spd : 30, enc : 20 }, // the objects "walk", "burrow", "climb", "fly", "swim" are all the same, they are an object with two attributes, 'spd' for the speed in feet, and 'enc' for the encumbered speed in feet.
+				
+				climb : { spd : "+50", enc : 0 }, // instead of numbers, you can also have modifiers. Modifiers are a string, starting with a mathematical operator, followed by a number (e.g. "-10", "+20"). // a value that is zero is ignored
+				
+				fly : { spd : "walk", enc : 0 }, // instead of a number/modifier, you can also set the attribute to "walk". This makes the speed mode assume the walking speed // Using an underscore as the first character means the value is only added if the value would be non-zero
+				
+				swim : { spd : "fixed 60", enc : "fixed 60" }, // if you include the word "fixed" together with a number, the movement mode will be that number, without any modifiers from other sources (like the Monk's speed bonus). However, if another entry that isn't 'fixed' does end up with a higher total while including any modifiers, that speed is used instead
+				
+				allModes : "+10" // the 'allModes' attribute can only consist of a modifier. This modifier is applied to all speed modes, both normal and encumbered. It is only applied if the speed mode exists, it won't give the character a burrow speed if it would otherwise have none, for example
+			},
+		},
+	}
+}
+
