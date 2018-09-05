@@ -31,7 +31,7 @@ SpellsList["call the quarters"] = {
 	name : "Call the Quarters",
 	classes : ["cleric", "druid", "ranger", "warlock", "witch (maranatha)"],
 	source : ["MCG", 0],
-	ritual : true
+	ritual : true,
 	level : 1,
 	school : "Conj",
 	time : "10 min",
@@ -59,7 +59,7 @@ SpellsList["omen"] = {
 	name : "Omen",
 	classes : ["bard", "cleric", "witch (maranatha)"],
 	source : ["MCG", 0],
-	ritual : true
+	ritual : true,
 	level : 1,
 	school : "Trans",
 	time : "10 min",
@@ -74,7 +74,7 @@ SpellsList["read aura"] = {
 	name : "Read Aura",
 	classes : ["witch (maranatha)"],
 	source : ["MCG", 0],
-	ritual : true
+	ritual : true,
 	level : 1,
 	school : "Ench",
 	time : "1 ba",
@@ -156,7 +156,7 @@ SpellsList["conjure cannon"] = {
 	name : "Conjure Cannon",
 	classes : ["wizard"],
 	source : ["MCG", 0],
-	ritual : true
+	ritual : true,
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -242,7 +242,7 @@ SpellsList["create elixir"] = {
 	name : "Create Elixir",
 	classes : ["bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "warlock", "witch (maranatha)", "wizard"],
 	source : ["MCG", 0],
-	ritual : true
+	ritual : true,
 	level : 5,
 	school : "Conj",
 	time : "10 min",
@@ -257,7 +257,7 @@ SpellsList["litany of the dead"] = {
 	name : "Litany of the Dead",
 	classes : ["bard", "paladin", "witch (maranatha)"],
 	source : ["MCG", 0],
-	ritual : true
+	ritual : true,
 	level : 7,
 	school : "Necro",
 	time : "30 min",
