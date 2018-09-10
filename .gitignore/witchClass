@@ -476,7 +476,26 @@ ClassList["witch (maranatha)"] = {
 			minlevel : 2,
 			description : "\n   " + "Choose a School of Magic using the \"Choose Feature\" button above. As a bonus action I can choose a target I can see within thirty feet. The target has disadvantage on saving throws to resist effects of my spells from the chosen school.", //required; the text to put in the "Class Features" field
 			choices : ["conjuration", "enchantment", "illusion", "necromancy", "transmutation"], //optional; choices the feature offers, if any.
-
+			"conjuration" : {
+					name : "Conjuration",
+					description : "",
+					source : [["MCG", 0],
+			"enchantment" : {
+					name : "Enchantment",
+					description : "",
+					source : [["MCG", 0],
+			"illusion" : {
+					name : "Illusion",
+					description : "",
+					source : [["MCG", 0],
+			"necromancy" : {
+					name : "Necromancy",
+					description : "",
+					source : [["MCG", 0],
+			"transmutation" : {
+					name : "Transmutation",
+					description : "",
+					source : [["MCG", 0],		
 			usages : "Intelligence modifier per ",
 usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			recovery : "long rest",
@@ -507,7 +526,180 @@ usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			minlevel : 20,
 			description : "\n   " + "Choose a second School of Magic using the \"Choose Feature\" button above. My Evil Eye affects this school as well. My Evil Eye ability now affects all targets affected by a spell I cast while using it. ", //required; the text to put in the "Class Features" field
 			choices : ["conjuration", "enchantment", "illusion", "necromancy", "transmutation"], //optional; choices the feature offers, if any.
+			"conjuration" : {
+					name : "Conjuration",
+					description : "",
+					source : [["MCG", 0],
+			"enchantment" : {
+					name : "Enchantment",
+					description : "",
+					source : [["MCG", 0],
+			"illusion" : {
+					name : "Illusion",
+					description : "",
+					source : [["MCG", 0],
+			"necromancy" : {
+					name : "Necromancy",
+					description : "",
+					source : [["MCG", 0],
+			"transmutation" : {
+					name : "Transmutation",
+					description : "",
+					source : [["MCG", 0],
 		},
 	}
 }
+
+AddSubClass( 
+	"witch (maranatha)", 	
+	"crimson circle", 	
+	{ // don't forget this opening bracket
+
+		regExpSearch : /Crimson/i
+		
+		subname : "Crimson Circle",
+		
+		source : ["MCG", 0], 
+		
+		features : { 		
+			"subclassfeature1" : { 
+				name : "Hard to Kill",
+				source : ["M", 0],
+				minlevel : 3,
+				description : "\n   " + "I gain resistance to fire and water breathing.",
+				dmgres : [["Fire"],
+			},
+			"subclassfeature2" : {
+				name : "Crimson Circle Spells",
+				source : ["M", 0],
+				minlevel : 3,
+				// need to find how to add bonus known spells like cleric or druid
+			},
+			"subclassfeature3" : {
+				name : "Impactful Casting",
+				source : ["M", 0],
+				minlevel : 6,
+				description : "\n   " + "I add my Intelligence modifier to the damage of my spells.",
+				//need formula here
+			},
+			"subclassfeature4" : {
+				name : "Vampiric Siphon",
+				source : ["M", 0],
+				minlevel : 10,
+				description : "\n   " + "When I deal Necrotic spell damage, I heal myself for half the damage dealt.",
+			},	
+			"subclassfeature5" : {
+				name : "Destructive Gaze",
+				source : ["M", 0],
+				minlevel : 14,
+				description : "\n   " + "Once per long rest, I can use my Evil Eye as a Destructive Gaze." + "\n   " + "If the creature fails its save against my Evil Eye by 5 or more, it is turned to ash." + "\n   " + "Otherwise it is affected by my Evil Eye and it is frightened of me for 1 minute.",
+				usages : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1],
+			recovery : "long rest",
+			action : ["bonus action"],
+			},
+		}
+	}
+	
+AddSubClass( 
+	"witch (maranatha)", 	
+	"cerulean circle", 	
+	{ // don't forget this opening bracket
+
+		regExpSearch : /Cerulean/i
+		
+		subname : "Cerulean Circle",
+		
+		source : ["MCG", 0], 
+		
+		features : { 		
+			"subclassfeature6" : { 
+				name : "Create Talisman",
+				source : ["M", 0],
+				minlevel : 3,
+				description : "\n   " + "I can create a talisman that provides benefits for me or another person." + "\n   " + "I choose Amulet, Charm, Disk, Pentacle, or Poppet. See book for details.",
+				usages : [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+				recovery : "long rest",
+				action : ["action"],
+			},
+			"subclassfeature7" : {
+				name : "Cerulean Circle Spells",
+				source : ["M", 0],
+				minlevel : 3,
+				// need to find how to add bonus known spells like cleric or druid
+			},
+			"subclassfeature8" : {
+				name : "Wortcunning",
+				source : ["M", 0],
+				minlevel : 6,
+				description : "\n   " + "When I administer a potion to another creature, I also gain the potion's benefits.",
+			},
+			"subclassfeature9" : {
+				name : "Master Scribe",
+				source : ["M", 0],
+				minlevel : 10,
+				description : "\n   " + "When I copy a spell from a scroll into my spellbook, the scroll is not destroyed." + "\n   " + "By spending 10 minutes, I make scrolls usable by any character with Spellcasting abilities.",
+			},	
+			"subclassfeature10" : {
+				name : "Enthralling Gaze",
+				source : ["M", 0],
+				minlevel : 14,
+				description : "\n   " + "Once per long rest, I can use my Evil Eye as an Enthralling Gaze." + "\n   " + "If the creature fails its save against my Evil Eye it is charmed by me for 10 minutes." + "\n   " + "It repeats the save if I direct it to do anything deadly.",
+				usages : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1],
+				recovery : "long rest",
+				action : ["bonus action"],
+			},
+		}
+	}
+	
+AddSubClass( 
+	"witch (maranatha)", 	
+	"crystal circle", 	
+	{ // don't forget this opening bracket
+
+		regExpSearch : /Crystal/i
+		
+		subname : "Crystal Circle",
+		
+		source : ["MCG", 0], 
+		
+		features : { 		
+			"subclassfeature11" : { 
+				name : "Healer's Touch",
+				source : ["M", 0],
+				minlevel : 3,
+				description : "\n   " + "I learn the spells Cure Wounds, Healing Word, and Bless.",
+				// need to find how to add spells.
+			},
+			"subclassfeature12" : {
+				name : "Crystal Circle Spells",
+				source : ["M", 0],
+				minlevel : 3,
+				// need to find how to add bonus known spells like cleric or druid
+			},
+			"subclassfeature13" : {
+				name : "Impactful Healing",
+				source : ["M", 0],
+				minlevel : 6,
+				description : "\n   " + "I add my Wisdom modifier to the amount healed by my spells and hit dice (minimum 1).",
+				//need formula here
+			},
+			"subclassfeature14" : {
+				name : "Sanctified Spirit",
+				source : ["M", 0],
+				minlevel : 10,
+				description : "\n   " + "When I complete a long rest, I am affected by Protection from Evil and Good." + "\n   " + "This lasts a number of hours equal to my Intelligence modifier (minimum 1).",
+			},	
+			"subclassfeature15" : {
+				name : "Piercing Gaze",
+				source : ["M", 0],
+				minlevel : 14,
+				description : "\n   " + "Once per long rest, I can use my Evil Eye as a Piercing Gaze." + "\n   " + "For 10 minutes I have truesight and automatically detect if creatures I speak with are lying.",
+				usages : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1],
+			recovery : "long rest",
+			action : ["bonus action"],
+			},
+		}
+	}
+);
+
 
